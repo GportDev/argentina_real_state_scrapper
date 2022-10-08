@@ -13,7 +13,8 @@ def get_dolar():
   sleep(1)
   content = BeautifulSoup(browser.page_source, 'html.parser')
 
-  dolar_today = browser.title.split()[1]
+  get_dolar_price = browser.title.split()[1].replace(",", ".")
+  dolar_today = float(get_dolar_price)
   return dolar_today
 
 def get_pesos():
@@ -21,5 +22,7 @@ def get_pesos():
   sleep(1)
   content = BeautifulSoup(browser.page_source, 'html.parser')
 
-  pesos_today = browser.title.split()[1]
+  get_pesos_price = browser.title.split()[1].replace(",", ".")
+  pesos_today = float(get_pesos_price)
   return pesos_today
+
