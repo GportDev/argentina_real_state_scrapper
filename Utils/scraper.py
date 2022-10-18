@@ -7,6 +7,9 @@ from selenium.webdriver.chrome.options import Options
 from converters import rent_converter, expenses_converter
 
 
+print("Start Scrapping...")
+
+
 def print_infos():
     print(f'======{index}======')
     print(f'Primeira foto: {first_image}')
@@ -76,3 +79,6 @@ for card in cards:
     print_infos()
 
     index = index + 1
+print(f"Scrapped {index} houses")
+browser.close()
+exit()
