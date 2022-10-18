@@ -1,2 +1,4 @@
 chromedriver.exe
 __pycache__
+poetry.lock
+.idea/
