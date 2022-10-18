@@ -6,24 +6,22 @@ from time import sleep
 from bs4 import BeautifulSoup
 from converters import dolar, pesos, rent_converter, expenses_converter
 
-def create_property():
-  apartment = {
-    "id": f'{property_id}',
-    "first_photo": f'{first_image}',
-    "address": f'{address.text}, {neighborhood.text}, Buenos Aires',
-    "total_amount": f'R$ {total_amount:.2f}',
-    "rent": f'{converted_rent:.2f}',
-    "expenses": f'{converted_expenses:.2f}',
-    "total_area": f'{total_area.text}',
-    "util_area": f'{util_area.text}',
-    "rooms": f'{rooms.text}',
-    "bedrooms": f'{bedrooms.text}',
-    "link": f'{link}'
-  }
-  return apartment
+def print_infos():
+  print(f'======{index}======')
+  print(f'Primeira foto: {first_image}')
+  print(f'Endereço: {address.text}, {neighborhood.text}, Buenos Aires')
+  print(f'Valor total: R$ {total_amount:.2f}')
+  print(f'Aluguel: R$ {converted_rent:.2f}')
+  print(f'Despesas: R$ {converted_expenses:.2f}')
+  print(f'Área total: R$ {total_area.text}')
+  print(f'Área útil: R$ {util_area.text}')
+  print(f'Cômodos: {rooms.text}')
+  print(f'Quartos: {bedrooms.text}')
+  print(f'Link: {link}')
+  print(f'======{property_id}======\n')
 
   
-apartments = []
+index = 1
 
 #Scrapper.py
 options = Options()
@@ -74,6 +72,6 @@ for card in cards:
 
   bedrooms = features[7]
   
-  apartments.append(create_property())
+  print_infos()
   
-print(apartments)
+  index = index + 1
