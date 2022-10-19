@@ -2,41 +2,42 @@
 
 Este projeto teve como objetivo aprimorar e documentar técnicas de web scrapping utilizando *Selenium Python* e a biblioteca *BeautifulSoup*. A pesquisa é feita no site <https://zonaprop.com.ar> e não tem nenhum fim lucrativo.
 
-Para testa-lo localmente, basta instalar as bibliotecas mencionadas acima utilizando os seguintes comandos:
+Para instalar localmente você precisa desses pré-requisitos:
+* [Poetry](https://python-poetry.org/)
+* [Python3](www.python.com)
+* [ChromeDriver](https://chromedriver.chromium.org)
 
-## Windows
-```$ pip install selenium ```
+## Preparação do Ambiente
 
-```$ pip install bs4 ```
+```$ poetry install ```
 
-## Linux:
+## Rodando 
+```$ python scrapper.py```
 
-```$ pip3 install selenium ```
-
-```$ pip3 install bs4 ```
-
-Para ambos ambientes é preciso baixar o webdriver do chrome (navegador escolhido), que se encontra no seguinte site: <https://chromedriver.chromium.org>
-
-Para ambientes Windows basta adicionar o arquivo extraído à pasta raiz do projeto e rodar o arquivo *scrapper.py* com o python.
-Para ambientes Linux basta mover o arquivo para o diretório */usr/bin* e rodar o arquivo *scrapper.py* com o python.
+## Problemas frequentes
+* Certifique-se que o ChromeDriver está configurado corretamente
+  * Versão mais recente instalada
+  * *Windows* - Path configurado corretamente na raiz da aplicação ou inserido nas variáveis de ambiente
+  * *Linux/Unix* - Binário do chromedriver disponível na pasta */usr/bin*
 
 # EN
 
 This project aims to increase and document my web scrapping techniques using the libraries Selenium and BeautifulSoup. I did the scrapping at <https://zonaprop.com.ar>, and it's a non-profit.
 
-To test it locally, you have to install the libraries above using these commands:
+To install locally you need these prerequisites:
+* [Poetry](https://python-poetry.org/)
+* [Python3](www.python.com)
+* [ChromeDriver](https://chromedriver.chromium.org)
 
-## Windows
-```$ pip install selenium ```
+## Environment Preparation
 
-```$ pip install bs4 ```
+```$ poetry install ```
 
-## Linux
-```$ pip3 install selenium ```
+## Running 
+```$ python scrapper.py```
 
-```$ pip3 install bs4 ```
-
-For both environments, you have to download the Chrome Webdriver (the browser chosen for this project), which is in this link: <https://chromedriver.chromium.org>
-
-In Windows, add the archive ".exe" downloaded to the project's root and run the *scrapper.py*
-In Linux, move the web driver archive to the directory /usr/bin and run the *scrapper.py*
+## Troubleshooting
+* Make sure ChromeDriver is configured correctly
+  * Latest version installed
+  * *Windows* - Path correctly configured in application root or inserted in environment variables
+  * *Linux/Unix* -Chromedriver binary available in */usr/bin* folder

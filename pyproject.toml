@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "argentina-real-state-scrapper"
+version = "0.1.0"
+description = ""
+authors = ["Mateus Vieira <asakbjj@gmail.com>", "Gabriel Porteiro"]
+readme = "README.md"
+packages = [{include = "argentina_real_state_scrapper"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.5.0"
+bs4 = "^0.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
